@@ -1,74 +1,47 @@
-🚕 Taxi Trip Price Prediction
-📖 Overview
+🚖 Taxi Trip Price Prediction
 
-This project predicts taxi trip fares using machine learning based on features like:
-
-Trip distance
-
-Trip duration
-
-Passenger count
-
-Time of day
-
-Day of week
-
-Traffic conditions
-
-Weather
-
+An end-to-end Machine Learning project to predict taxi fares based on trip details such as distance, time, traffic, weather, and passenger count.
 It also includes a Flask API for real-time predictions.
+
+📌 Features
+
+✔️ Predicts taxi trip prices using Gradient Boosting Regressor
+✔️ Data cleaning, preprocessing, and feature engineering
+✔️ Interactive visualizations (box plots, violin plots, heatmaps, scatter plots)
+✔️ Cross-validation for model reliability
+✔️ Flask API for deployment and Postman testing
+
+🛠️ Technologies Used
+
+Python 🐍 – Core language
+
+Pandas, NumPy – Data cleaning & analysis
+
+Matplotlib, Seaborn – Visualizations
+
+Scikit-learn – ML models & pipeline
+
+Flask – API deployment
+
+Postman – API testing
 
 📊 Dataset
 
-File: taxi_trip_pricing.csv
-Target: Trip_Price
-Features:
+📁 File: taxi_trip_pricing.csv
+🎯 Target Variable: Trip_Price
 
-Trip_Distance_km
+Features include:
 
-Trip_Duration_Minutes
+Trip Distance (km)
 
-Passenger_Count
+Trip Duration (minutes)
 
-Time_of_Day
+Passenger Count
 
-Day_of_Week
+Time of Day
 
-Traffic_Conditions
+Day of Week
+
+Traffic Conditions
 
 Weather
-
-⚙️ Workflow
-
-Data Cleaning & Preprocessing (handled missing values, duplicates).
-
-Exploratory Data Analysis (EDA) → Matplotlib & Seaborn.
-
-Feature Engineering → created distance categories.
-
-Model Training:
-
-Linear Regression
-
-Random Forest Regressor
-
-Gradient Boosting Regressor (final choice ✅)
-
-Model Evaluation → R², MAE, RMSE, Cross-Validation.
-
-Deployment → Flask API, tested via Postman.
-
-🖥️ Tech Stack
-
-Python 🐍
-
-Pandas, NumPy
-
-Matplotlib, Seaborn
-
-Scikit-learn
-
-Flask
-
-Postman
