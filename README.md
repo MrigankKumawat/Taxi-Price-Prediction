@@ -1,38 +1,51 @@
 🚕 Taxi Trip Price Prediction
 📖 Overview
 
-This project predicts taxi trip fares using machine learning models based on features such as trip distance, duration, passenger count, time of day, day of week, traffic conditions, and weather.
-The project also includes a Flask API for real-time predictions.
+This project predicts taxi trip fares using machine learning based on features like:
+
+Trip distance
+
+Trip duration
+
+Passenger count
+
+Time of day
+
+Day of week
+
+Traffic conditions
+
+Weather
+
+It also includes a Flask API for real-time predictions.
 
 📊 Dataset
 
-Dataset used: taxi_trip_pricing.csv (~4k–5k rows).
-
-Features include:
+File: taxi_trip_pricing.csv
+Target: Trip_Price
+Features:
 
 Trip_Distance_km
+
+Trip_Duration_Minutes
+
+Passenger_Count
 
 Time_of_Day
 
 Day_of_Week
 
-Passenger_Count
-
 Traffic_Conditions
 
 Weather
-
-Trip_Duration_Minutes
-
-Target: Trip_Price
 
 ⚙️ Workflow
 
 Data Cleaning & Preprocessing (handled missing values, duplicates).
 
-Exploratory Data Analysis (EDA) using Matplotlib & Seaborn.
+Exploratory Data Analysis (EDA) → Matplotlib & Seaborn.
 
-Feature Engineering (distance category).
+Feature Engineering → created distance categories.
 
 Model Training:
 
@@ -40,17 +53,19 @@ Linear Regression
 
 Random Forest Regressor
 
-Gradient Boosting Regressor (✅ final choice)
+Gradient Boosting Regressor (final choice ✅)
 
-Model Evaluation using R², MAE, RMSE, Cross-Validation.
+Model Evaluation → R², MAE, RMSE, Cross-Validation.
 
-Deployment using Flask API (tested with Postman).
+Deployment → Flask API, tested via Postman.
 
 🖥️ Tech Stack
 
-Python
+Python 🐍
 
-Pandas, NumPy, Matplotlib, Seaborn
+Pandas, NumPy
+
+Matplotlib, Seaborn
 
 Scikit-learn
 
