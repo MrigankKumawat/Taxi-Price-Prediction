@@ -1,4 +1,4 @@
-🚖 Taxi Trip Price Prediction
+# 🚖 Taxi Trip Price Prediction
 
 An end-to-end Machine Learning project to predict taxi fares based on trip details such as distance, time, traffic, weather, and passenger count.
 It also includes a Flask API for real-time predictions.
