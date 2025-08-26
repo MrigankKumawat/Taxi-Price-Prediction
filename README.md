@@ -48,9 +48,13 @@ Features include:
 📄 taxi_trip_pricing.csv – Dataset
 
 📂 vscode/ – Deployment & Model Export
+
      ├── interference.py – Model training & export script
+     
      ├── server.py – Flask API for predictions
+     
      ├── model.pkl – Trained ML model
+     
      ├── pipeline.pkl – Preprocessing pipeline
      
 📄 README.md – Project documentation
