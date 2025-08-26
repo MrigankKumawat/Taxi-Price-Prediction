@@ -28,7 +28,7 @@ heatmaps, scatter plots)
 ## 📊 Dataset
 
 📁 File: taxi_trip_pricing.csv
-📏 Rows: ~4,000 – 5,000
+
 🎯 Target Variable: Trip_Price
 
 Features include:
