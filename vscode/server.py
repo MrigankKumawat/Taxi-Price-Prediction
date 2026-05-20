@@ -11,7 +11,7 @@ CORS(app)  # <-- enable CORS so HTML form can call API
 model = joblib.load("vscode/model.pkl")
 pipeline = joblib.load("vscode/pipeline.pkl")
 
-app.route('/')
+@app.route('/')
 def home():
     return render_template("index.html")
 
