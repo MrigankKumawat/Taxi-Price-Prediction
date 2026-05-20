@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, render_template, request
 import joblib
 import pandas as pd
 
@@ -10,6 +10,10 @@ CORS(app)  # <-- enable CORS so HTML form can call API
 # Load model and pipeline
 model = joblib.load("vscode/model.pkl")
 pipeline = joblib.load("vscode/pipeline.pkl")
+
+app.route('/')
+def home():
+    return render_template("index.html")
 
 @app.route("/predict", methods=["POST"])
 def predict():
