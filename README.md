@@ -28,7 +28,6 @@ heatmaps, scatter plots)
 ## 📊 Dataset
 
 📁 File: taxi_trip_pricing.csv
-
 🎯 Target Variable: Trip_Price
 
 Features include:
@@ -57,4 +56,3 @@ Features include:
      
      ├── pipeline.pkl – Preprocessing pipeline
      
-📄 README.md – Project documentation

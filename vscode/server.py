@@ -1,25 +1,35 @@
 from flask import Flask, jsonify, request
 import joblib
 import pandas as pd
-import numpy as np
 
-from flask import Flask
+from flask_cors import CORS   # <-- add this
+
 app = Flask(__name__)
+CORS(app)  # <-- enable CORS so HTML form can call API
 
-model = joblib.load("model.pkl")
-pipeline = joblib.load("pipeline.pkl")
+# Load model and pipeline
+model = joblib.load("vscode/model.pkl")
+pipeline = joblib.load("vscode/pipeline.pkl")
 
-@app.route("/predict", methods = ['POST'])
+@app.route("/predict", methods=["POST"])
 def predict():
     try:
         data = request.get_json()
-        df = pd.DataFrame([data])
-        processed_data = pipeline.transform(df)
-        prediction = model.predict(processed_data)
 
-        return jsonify({"Predicted Price:": prediction[0]})
+        # Convert JSON to DataFrame
+        df = pd.DataFrame([data])
+
+        # Transform input using pipeline
+        processed_data = pipeline.transform(df)
+
+        # Predict
+        prediction = model.predict(processed_data)[0]
+
+        return jsonify({"Predicted Price": float(prediction)})  # ✅ no colon in key
     
     except Exception as e:
-        return jsonify({"Error": str(e)})
+        return jsonify({"Error": str(e)}), 400
 
-app.run(debug = True)
+
+if __name__ == "__main__":
+    app.run(debug=True)
