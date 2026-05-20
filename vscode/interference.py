@@ -29,7 +29,7 @@ def build_pipeline(num_attrbs, cat_attrbs):
     return full_pipeline
 
 if not os.path.exists(MODEL_FILE):
-    df = pd.read_csv("taxi_trip_pricing.csv")
+    df = pd.read_csv("vscode/taxi_trip_pricing.csv")
 
     ## For Numeric Columns
     df['Trip_Distance_km'] = df['Trip_Distance_km'].fillna(df['Trip_Distance_km'].median())
